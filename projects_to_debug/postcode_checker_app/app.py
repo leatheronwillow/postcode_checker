@@ -15,6 +15,7 @@ def check():
     checker = PostcodeChecker()
     postcode = request.form.get('postcode')
     is_valid = checker.check(postcode)
+    print(is_valid)
     return render_template('result.html.jinja2', postcode=postcode, is_valid=is_valid)
 
 
